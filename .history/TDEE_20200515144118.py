@@ -37,3 +37,5 @@ class TDEE:
         return tdee
 
     tdeeCalc(bmr, activity_levels)
+
+    print(tdee)

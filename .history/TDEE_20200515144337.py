@@ -1,8 +1,8 @@
 class TDEE:
-    sex = "Male"
-    weight = 170
-    height = 69
-    age = 24
+    #sex = "Male"
+    weight = float(input("What's your weight in pounds?"))
+    height = float(input("What's your height in inches?"))
+    age = float(input("What's your age?"))
     activity_levels = {'Sedentary': 1.2, 'Lightly Active': 1.375, 'Moderately Active': 1.55, 'Very Active': 1.725, 'Extremely Active': 1.9 }
 
     def __init__(self, weight, height, age, bmr):
@@ -12,6 +12,7 @@ class TDEE:
         self.bmr = bmr
 
     def convert_to_metric(weight, height):
+        """mWeight/mHeight are the metric conversion """
         global mWeight
         global mHeight
         mWeight = weight / 2.2
@@ -28,7 +29,6 @@ class TDEE:
 
     bmrCalc(mWeight, mHeight, age)
 
-    print(bmr)
 
     def tdeeCalc(bmr, activity_levels):
         global tdee
@@ -37,5 +37,3 @@ class TDEE:
         return tdee
 
     tdeeCalc(bmr, activity_levels)
-
-    print(tdee)

@@ -29,6 +29,7 @@ class TDEE:
 
     bmrCalc(mWeight, mHeight, age)
 
+    print(bmr)
 
     def tdeeCalc(bmr, activity_levels):
         global tdee
@@ -37,3 +38,5 @@ class TDEE:
         return tdee
 
     tdeeCalc(bmr, activity_levels)
+
+    print(tdee)
